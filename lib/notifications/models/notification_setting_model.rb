@@ -9,6 +9,16 @@ module Notifications
         belongs_to :user, class_name: Notifications.config.user_class
       end
 
+      def matches_email?(notify_type)
+        self.send("#{notify_type}_emails")
+      end
+
+      module ClassMethods
+        def user_settings(user_id)
+          NotificationSetting.find_or_create_by(user_id: user_id)
+        end
+      end
+
     end
   end
 end
