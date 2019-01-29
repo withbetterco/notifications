@@ -1,4 +1,4 @@
-require 'notifications/model'
+require 'notifications/models/notification_model'
 require 'notifications/engine'
 require 'notifications/configuration'
 require 'notifications/version'
