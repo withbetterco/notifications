@@ -1,4 +1,5 @@
 require 'notifications/models/notification_model'
+require 'notifications/models/notification_setting_model'
 require 'notifications/engine'
 require 'notifications/configuration'
 require 'notifications/version'
@@ -15,6 +16,8 @@ module Notifications
       @config.user_profile_url_method  = nil
       @config.authenticate_user_method = nil
       @config.current_user_method      = 'current_user'
+      @config.settings_defaul_checkboxes = [['email', 'emails'], ['sms', 'texts']]
+      @config.settings_options = {}
       @config
     end
 

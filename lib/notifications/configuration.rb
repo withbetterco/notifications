@@ -39,5 +39,10 @@ module Notifications
 
     # authenticate_user method in your Controller, default: nil
     attr_accessor :authenticate_user_method
+
+    attr_accessor :settings_defaul_checkboxes
+
+    attr_accessor :settings_options
+
   end
 end
